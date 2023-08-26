@@ -1,12 +1,8 @@
-type HomeProps = {
-  path: string;
-};
-
-
+import Header from '../../conponents/Header/Header'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Header></Header>
   )
 }
 

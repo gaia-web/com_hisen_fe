@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks'
+import { ChakraProvider } from '@chakra-ui/react';
 import Router from 'preact-router';
 import Home from './routes/Home/Home';
 import AboutUs from './routes/AboutUs/AboutUs';
@@ -6,9 +6,11 @@ import AboutUs from './routes/AboutUs/AboutUs';
 
 export function App() {
   return (
-    <Router>
-      <Home path="/" />
-      <AboutUs path="/about" />
-    </Router>
+    <ChakraProvider>
+      <Router>
+        <Home path="/" />
+        <AboutUs path="/about" />
+      </Router>
+    </ChakraProvider>
   )
 }
