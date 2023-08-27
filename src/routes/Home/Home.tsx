@@ -1,8 +1,16 @@
-import Header from '../../conponents/Header/Header'
+import Banner from '../../conponents/Home/Banner/Banner';
+import Feature from '../../conponents/Home/Feature/Feature';
+import Program from '../../conponents/Home/Program/Program';
+import Testimonials from '../../conponents/Home/Testimonials/Testimonials';
 
 const Home = () => {
   return (
-    <Header></Header>
+    <>
+      <Banner></Banner>
+      <Feature></Feature>
+      <Program></Program>
+      <Testimonials></Testimonials>
+    </>
   )
 }
 

@@ -21,7 +21,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
-
+import { Link } from 'preact-router/match';
 import logo from '../../assets/logo_ch.png';
 
 export default function WithSubnavigation() {
@@ -75,7 +75,7 @@ export default function WithSubnavigation() {
             _hover={{
               bg: 'pink.300',
             }}>
-            Sign Up
+            联系我们
           </Button>
         </Stack>
       </Flex>
@@ -95,14 +95,11 @@ const DesktopNav = () => {
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Flex key={navItem.label}  justifyContent="center" alignItems="center">
+        <Flex key={navItem.label} justifyContent="center" alignItems="center">
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger >
-            {/* <Flex justifyContent="center" alignItems="center"> */}
               <Box
-                as="a"
                 p={2}
-                href={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={linkColor}
@@ -110,9 +107,10 @@ const DesktopNav = () => {
                   textDecoration: 'none',
                   color: linkHoverColor,
                 }}>
-                {navItem.label}
+                <Link activeClassName="active" href={navItem.href ?? '#'}>
+                  {navItem.label}
+                </Link>
               </Box>
-            {/* </Flex> */}
             </PopoverTrigger>
 
             {navItem.children && (
@@ -140,8 +138,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Box
-      as="a"
-      href={href}
+
       role={'group'}
       display={'block'}
       p={2}
@@ -149,13 +146,15 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}>
-            {label}
-          </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
+          <Link activeClassName="active" href={href}>
+            <Text
+              transition={'all .3s ease'}
+              _groupHover={{ color: 'pink.400' }}
+              fontWeight={500}>
+              {label}
+            </Text>
+            <Text fontSize={'sm'}>{subLabel}</Text>
+          </Link>
         </Box>
         <Flex
           transition={'all .3s ease'}
@@ -247,27 +246,27 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: '高管工签 / 投资人工签',
-        subLabel: 'An exclusive list for contract work',
+        subLabel: 'Intra-Company Transferee Work Permit / Owner Operator Work Permit',
         href: '#',
       },
       {
         label: 'BC省提名项目',
-        subLabel: 'Find your dream design job',
+        subLabel: 'British Columbia Provincial Nominee Program',
         href: '#',
       },
       {
         label: 'EEBC – BC省快速通道项目',
-        subLabel: 'An exclusive list for contract work',
+        subLabel: 'British Columbia Express Entry Program',
         href: '#',
       },
       {
         label: '联邦类通道移民项目',
-        subLabel: 'An exclusive list for contract work',
+        subLabel: 'Federal Express Entry Immigration Program',
         href: '#',
       },
       {
         label: '团聚移民项目',
-        subLabel: 'An exclusive list for contract work',
+        subLabel: 'Family Sponsorship Program',
         href: '#',
       }
     ],
@@ -278,14 +277,14 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: '关于我们',
-    href: '#',
-  },
-  {
-    label: '常见问题 ',
-    href: '#',
+    href: 'about',
   },
   {
     label: '新闻 ',
+    href: '#',
+  },
+  {
+    label: 'English ',
     href: '#',
   },
 ]
