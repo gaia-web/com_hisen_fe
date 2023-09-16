@@ -7,7 +7,6 @@ import {
     Stack,
     Text,
     Button,
-    Badge,
     Center,
     Image,
     useColorModeValue,

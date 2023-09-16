@@ -29,7 +29,7 @@ const settings = {
 export default function CaptionCarousel() {
   // As we have used custom buttons, we need a reference variable to
   // change the state
-  const [slider, setSlider] = useState<Slider | null>(null)
+  const [slider, setSlider] = useState<any | null>(null)
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
@@ -97,7 +97,7 @@ export default function CaptionCarousel() {
         <BiRightArrowAlt size="40px" />
       </IconButton>
       {/* Slider */}
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+      <Slider {...settings} ref={(slider:any) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box
             key={index}

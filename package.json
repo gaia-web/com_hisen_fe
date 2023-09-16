@@ -17,7 +17,8 @@
     "preact": "^10.16.0",
     "preact-router": "^4.1.2",
     "react-icons": "^4.10.1",
-    "react-slick": "^0.29.0"
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
