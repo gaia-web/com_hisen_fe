@@ -5,6 +5,7 @@ import Footer from './conponents/Footer/Footer';
 import { Router, Route } from 'preact-router';
 import Home from './routes/Home/Home';
 import AboutUs from './routes/AboutUs/AboutUs';
+import NotFound from './routes/NotFound/NotFound';
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
           <Router>
             <Route path="/" component={Home} />
             <Route path="/about" component={AboutUs} />
+            <Route default component={NotFound} />
           </Router>
         </Box>
         <Footer></Footer>
