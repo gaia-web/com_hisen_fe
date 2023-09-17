@@ -8,8 +8,6 @@ import {
   Heading,
   Image,
   Text,
-  Flex,
-  Spacer,
   useColorModeValue,
   Center,
   SimpleGrid,
