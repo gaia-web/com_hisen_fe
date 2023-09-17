@@ -5,6 +5,7 @@ import Footer from './conponents/Footer/Footer';
 import { Router, Route } from 'preact-router';
 import Home from './routes/Home/Home';
 import AboutUs from './routes/AboutUs/AboutUs';
+import ContactUs from './routes/ContactUs/ContactUs';
 import NotFound from './routes/NotFound/NotFound';
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
           <Router>
             <Route path="/" component={Home} />
             <Route path="/about" component={AboutUs} />
+            <Route path="/contact-us" component={ContactUs} />
             <Route default component={NotFound} />
           </Router>
         </Box>

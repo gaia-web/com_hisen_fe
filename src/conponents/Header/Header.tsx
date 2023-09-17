@@ -74,7 +74,9 @@ export default function WithSubnavigation() {
             _hover={{
               bg: 'pink.300',
             }}>
-            联系我们
+            <Link activeClassName="active" href='/contact-us'>
+              联系我们
+            </Link>
           </Button>
         </Stack>
       </Flex>
