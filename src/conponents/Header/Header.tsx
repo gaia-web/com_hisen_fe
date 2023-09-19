@@ -251,13 +251,13 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '#',
       },
       {
-        label: 'BC省提名项目',
-        subLabel: 'British Columbia Provincial Nominee Program',
+        label: 'BC投资移民类别',
+        subLabel: 'Entrepreneur Immigration',
         href: '#',
       },
       {
-        label: 'EEBC – BC省快速通道项目',
-        subLabel: 'British Columbia Express Entry Program',
+        label: 'BC省提名项目',
+        subLabel: 'British Columbia Provincial Nominee Program',
         href: '#',
       },
       {
