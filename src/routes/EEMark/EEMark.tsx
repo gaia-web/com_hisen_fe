@@ -27,7 +27,7 @@ const EEMark = () => {
           onLoad={() => {
             setIsLoading(false);
           }}
-          onError={(e) => {
+          onError={() => {
             setIsLoading(false);
             console.error("Failed to load the iframe content.");
           }}
