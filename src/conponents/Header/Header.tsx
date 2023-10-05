@@ -21,7 +21,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 import { Link } from 'preact-router/match';
-import logo from '../../assets/logo_ch.png';
+import logo from '../../assets/logo_ch.webp';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
@@ -273,16 +273,16 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: '成功案例',
-    href: '#',
-  },
-  {
     label: '关于我们',
     href: 'about',
   },
   {
     label: '新闻 ',
     href: '#',
+  },
+  {
+    label: '在线打分 ',
+    href: '/mark',
   },
   {
     label: 'English ',

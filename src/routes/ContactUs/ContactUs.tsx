@@ -53,7 +53,7 @@ export default function ContactUs() {
                             </InputGroup>
                         </FormControl>
 
-                        <FormControl isRequired>
+                        <FormControl>
                             <FormLabel>手机号码</FormLabel>
                             <InputGroup>
                                 <InputLeftElement>
@@ -77,7 +77,7 @@ export default function ContactUs() {
                             <FormLabel>留言</FormLabel>
                             <Textarea
                                 name="message"
-                                placeholder="您的留言"
+                                placeholder="您感兴趣的移民项目"
                                 rows={6}
                                 resize="none"
                             />

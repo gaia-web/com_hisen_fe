@@ -13,6 +13,10 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
 
+import ban1 from '../../../img/banners/ban1.webp';
+import ban2 from '../../../img/banners/ban2.webp';
+import ban3 from '../../../img/banners/ban3.webp';
+
 // Settings for the slider
 const settings = {
   dots: true,
@@ -42,20 +46,17 @@ export default function CaptionCarousel() {
     {
       title: '欢迎来到海盛国际咨询有限公司',
       text: "位于美丽的温哥华，为您提供专业的加拿大移民咨询服务。",
-      image:
-        'https://images.unsplash.com/photo-1559511260-66a654ae982a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3018&q=80',
+      image: ban1
     },
     {
       title: '您的移民梦，我们的承诺',
       text: "经验丰富的团队，引导您走向成功的移民之路。",
-      image:
-        'https://images.unsplash.com/photo-1578973615934-8d9cdb0792b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3089&q=80',
+      image: ban2
     },
     {
       title: '加拿大，一个新的开始',
       text: "探索这片充满机会和自然之美的土地。",
-      image:
-        'https://images.unsplash.com/photo-1663633945075-5e54f637e5b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      image: ban3
     },
   ]
 
@@ -97,7 +98,7 @@ export default function CaptionCarousel() {
         <BiRightArrowAlt size="40px" />
       </IconButton>
       {/* Slider */}
-      <Slider {...settings} ref={(slider:any) => setSlider(slider)}>
+      <Slider {...settings} ref={(slider: any) => setSlider(slider)}>
         {cards.map((card, index) => (
           <Box
             key={index}

@@ -6,6 +6,7 @@ import { Router, Route } from 'preact-router';
 import Home from './routes/Home/Home';
 import AboutUs from './routes/AboutUs/AboutUs';
 import ContactUs from './routes/ContactUs/ContactUs';
+import EEMark from './routes/EEMark/EEMark';
 import NotFound from './routes/NotFound/NotFound';
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
             <Route path="/" component={Home} />
             <Route path="/about" component={AboutUs} />
             <Route path="/contact-us" component={ContactUs} />
+            <Route path="/mark" component={EEMark} />
             <Route default component={NotFound} />
           </Router>
         </Box>
