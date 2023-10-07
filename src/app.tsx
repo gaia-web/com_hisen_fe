@@ -8,6 +8,8 @@ import AboutUs from './routes/AboutUs/AboutUs';
 import ContactUs from './routes/ContactUs/ContactUs';
 import EEMark from './routes/EEMark/EEMark';
 import ICT from './routes/ImmigrationPathways/ICT/ICT';
+import EntrepreneurBCPNP from './routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP';
+import BCPNP from './routes/ImmigrationPathways/BCPNP/BCPNP';
 import NotFound from './routes/NotFound/NotFound';
 
 export function App() {
@@ -21,6 +23,8 @@ export function App() {
             <Route path="/about" component={AboutUs} />
             <Route path="/contact-us" component={ContactUs} />
             <Route path="/ict" component={ICT} />
+            <Route path="/EntrepreneurBCPNP" component={EntrepreneurBCPNP} />
+            <Route path="/BCPNP" component={BCPNP} />
             <Route path="/mark" component={EEMark} />
             <Route default component={NotFound} />
           </Router>
