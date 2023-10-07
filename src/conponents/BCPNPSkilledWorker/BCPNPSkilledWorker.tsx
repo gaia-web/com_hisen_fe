@@ -1,7 +1,7 @@
 import { Box, Heading, List, ListItem, Text, Button, VStack, Icon, Flex, Spacer, useColorModeValue, Image } from "@chakra-ui/react";
 import { CheckCircleIcon } from '@chakra-ui/icons';
 import { Link } from 'preact-router/match';
-import bcpnpSkilledWorker from '../../img/ImmigrationPathways/BCPNPSkilledWorker.webp';
+import bcpnpSkilledWorker from '../../img/ImmigrationPathways/bcpnpSkilledWorker.webp';
 
 const BCPNPSkilledWorker = () => {
     const bgColor = useColorModeValue("gray.100", "gray.700");
