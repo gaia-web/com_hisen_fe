@@ -18,7 +18,7 @@ const EEMark = () => {
           </div>
         )}
         <iframe 
-          src="https://651ebb8fd7733326bd990427--benevolent-palmier-b77fc4.netlify.app/" 
+          src="https://benevolent-palmier-b77fc4.netlify.app/" 
           title="EEMark Embedded Page"
           width="100%" 
           height="100%" 
@@ -33,7 +33,9 @@ const EEMark = () => {
           }}
           style={{
             WebkitOverflowScrolling: 'touch',
-            WebkitScrollbar: 'none'
+            WebkitScrollbar: 'none',
+            overflow:'hidden'
+
           }}
         ></iframe>
       </div>

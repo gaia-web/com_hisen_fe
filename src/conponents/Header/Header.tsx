@@ -248,7 +248,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: '高管工签 / 投资人工签',
         subLabel: 'Intra-Company Transferee Work Permit / Owner Operator Work Permit',
-        href: '#',
+        href: '/ict',
       },
       {
         label: 'BC投资移民类别',
