@@ -6,13 +6,6 @@ import {
   AccordionPanel,
   AccordionIcon,
   Heading,
-  Image,
-  Text,
-  useColorModeValue,
-  Center,
-  SimpleGrid,
-  Badge,
-  Divider,
   CircularProgress,
 } from "@chakra-ui/react";
 import { OneDriveAdapter, OneDriveFile } from "drive-adapters";
