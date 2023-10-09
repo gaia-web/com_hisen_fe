@@ -1,6 +1,6 @@
 import { Divider } from '@chakra-ui/react';
-import ICTVisa from '../../../conponents/ICT/ICTVisa'
-import OOWPVisa from '../../../conponents/OOWP/OOWPVisa'
+import ICTVisa from '../../../componenets/ICT/ICTVisa'
+import OOWPVisa from '../../../componenets/OOWP/OOWPVisa'
 
 const ICT = () => {
     return (

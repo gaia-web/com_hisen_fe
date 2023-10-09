@@ -1,12 +1,12 @@
 import { Divider } from '@chakra-ui/react';
-import BCPNPGraduate from '../../../conponents/BCPNPGraduate/BCPNPGraduate';
-import BCPNPPostGraduate from '../../../conponents/BCPNPPostGraduate/BCPNPPostGraduate';
-import BCPNPSkilledWorker from '../../../conponents/BCPNPSkilledWorker/BCPNPSkilledWorker';
-import BCPNPEntryLevel from '../../../conponents/BCPNPEntryLevel/BCPNPEntryLevel';
-import BCPNPTech from '../../../conponents/BCPNPTech/BCPNPTech';
-import HealthAuthorityStream from '../../../conponents/HealthAuthorityStream/HealthAuthorityStream';
-import ChildcareOccupations from '../../../conponents/ChildcareOccupations/ChildcareOccupations';
-import EEBCFastTrack from '../../../conponents/EEBCFastTrack/EEBCFastTrack';
+import BCPNPGraduate from '../../../componenets/BCPNPGraduate/BCPNPGraduate';
+import BCPNPPostGraduate from '../../../componenets/BCPNPPostGraduate/BCPNPPostGraduate';
+import BCPNPSkilledWorker from '../../../componenets/BCPNPSkilledWorker/BCPNPSkilledWorker';
+import BCPNPEntryLevel from '../../../componenets/BCPNPEntryLevel/BCPNPEntryLevel';
+import BCPNPTech from '../../../componenets/BCPNPTech/BCPNPTech';
+import HealthAuthorityStream from '../../../componenets/HealthAuthorityStream/HealthAuthorityStream';
+import ChildcareOccupations from '../../../componenets/ChildcareOccupations/ChildcareOccupations';
+import EEBCFastTrack from '../../../componenets/EEBCFastTrack/EEBCFastTrack';
 const BCPNP = () => {
     return (
         <>
