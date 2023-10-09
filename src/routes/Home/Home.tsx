@@ -1,7 +1,7 @@
-import Banner from '../../componenets/Home/Banner/Banner';
-import Feature from '../../componenets/Home/Feature/Feature';
-import Program from '../../componenets/Home/Program/Program';
-import Testimonials from '../../componenets/Home/Testimonials/Testimonials';
+import Banner from '../../components/Home/Banner/Banner';
+import Feature from '../../components/Home/Feature/Feature';
+import Program from '../../components/Home/Program/Program';
+import Testimonials from '../../components/Home/Testimonials/Testimonials';
 
 const Home = () => {
   return (
