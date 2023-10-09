@@ -41,19 +41,11 @@ function NewsUpdates() {
           context: (await md.contentAsText) ?? "",
         });
       }
-
-      console.log("children", mdList);
-      console.log("children", mdList2);
       setNews(mdList2);
     };
 
     fetchData();
-    console.log("Done");
   }, []);
-
-  if (!news) {
-    return <CircularProgress />;
-  }
 
   return (
     <Box>
