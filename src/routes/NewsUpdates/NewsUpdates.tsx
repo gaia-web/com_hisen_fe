@@ -28,6 +28,7 @@ function NewsUpdates() {
       for await (let child of children) {
         // if the child item has name ending with ".md", then push it into mdList
         if (child.name?.endsWith(".md")) {
+          // TODO: Remove this, for demo only
           const a = Array.from(Array(22).keys());
           for (const ee of a) {
             mdList.push(child as OneDriveFile);
