@@ -1,18 +1,23 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { Flex, Box } from '@chakra-ui/react';
-import Header from './conponents/Header/Header';
-import Footer from './conponents/Footer/Footer';
-import { Router, Route } from 'preact-router';
-import Home from './routes/Home/Home';
-import AboutUs from './routes/AboutUs/AboutUs';
-import ContactUs from './routes/ContactUs/ContactUs';
-import EEMark from './routes/EEMark/EEMark';
-import ICT from './routes/ImmigrationPathways/ICT/ICT';
-import EntrepreneurBCPNP from './routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP';
-import BCPNP from './routes/ImmigrationPathways/BCPNP/BCPNP';
-import NotFound from './routes/NotFound/NotFound';
+import { ChakraProvider } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
+import Header from "./conponents/Header/Header";
+import Footer from "./conponents/Footer/Footer";
+import { Router, Route } from "preact-router";
+import Home from "./routes/Home/Home";
+import AboutUs from "./routes/AboutUs/AboutUs";
+import ContactUs from "./routes/ContactUs/ContactUs";
+import EEMark from "./routes/EEMark/EEMark";
+import ICT from "./routes/ImmigrationPathways/ICT/ICT";
+import EntrepreneurBCPNP from "./routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP";
+import BCPNP from "./routes/ImmigrationPathways/BCPNP/BCPNP";
+import NotFound from "./routes/NotFound/NotFound";
+import { useState } from "preact/hooks";
+import { setForceUpdate } from "./utils/language";
 
 export function App() {
+  const [_, updateHelper] = useState({});
+  setForceUpdate(() => updateHelper({}));
+
   return (
     <ChakraProvider>
       <Flex flexDir="column" minH="100vh">
@@ -32,5 +37,5 @@ export function App() {
         <Footer></Footer>
       </Flex>
     </ChakraProvider>
-  )
+  );
 }
