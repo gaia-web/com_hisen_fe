@@ -3,22 +3,19 @@ import {
   Accordion,
   AccordionItem,
   AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
   Heading,
   CircularProgress,
+  Flex,
+  Button,
 } from "@chakra-ui/react";
 import { OneDriveAdapter, OneDriveFile } from "drive-adapters";
 import { useEffect, useState } from "preact/hooks";
 
 function NewsUpdates() {
-  const [news, setNews] = useState<
-    {
-      title: string;
-      createdTime: Date;
-      context: string;
-    }[]
-  >();
+  const [news, setNews] = useState<OneDriveFile[]>([]);
+  const [index, setIndex] = useState<number>(0);
+  const [pages, setPages] = useState<number[]>([]);
+  const pageSizes = 5;
 
   const sharingLink = `https://1drv.ms/f/s!Akwk_rooMFtbgRZsFanDS-fleX-m?e=1jz0gf`;
   const driveAdapter = new OneDriveAdapter(sharingLink);
@@ -26,26 +23,30 @@ function NewsUpdates() {
   useEffect(() => {
     const fetchData = async () => {
       const mdList = [];
-      const mdList2 = [];
       const children = await driveAdapter.children;
       if (!children) return;
       for await (let child of children) {
         // if the child item has name ending with ".md", then push it into mdList
-        if (child.name?.endsWith(".md")) mdList.push(child as OneDriveFile);
+        if (child.name?.endsWith(".md")) {
+          // TODO: Remove this, for demo only
+          const a = Array.from(Array(22).keys());
+          for (const ee of a) {
+            mdList.push(child as OneDriveFile);
+          }
+        }
       }
 
-      for (let md of mdList) {
-        mdList2.push({
-          title: md.name ?? "",
-          createdTime: md.createdTime ?? new Date(),
-          context: (await md.contentAsText) ?? "",
-        });
-      }
-      setNews(mdList2);
+      setNews(mdList);
+      setPages(Array.from(Array(Math.ceil(mdList.length / pageSizes)).keys()));
     };
 
     fetchData();
   }, []);
+
+  const redirectToDetail = async (contextLink: Promise<string | undefined>) => {
+    history.pushState({ context: await contextLink }, "", "/news/detail");
+    history.go();
+  };
 
   return (
     <Box>
@@ -54,22 +55,74 @@ function NewsUpdates() {
           新闻
         </Heading>
 
+        <Flex>
+          <Button
+            onClick={() => {
+              setIndex(0);
+            }}
+          >{`<<`}</Button>
+          <Button
+            onClick={() => {
+              setIndex(index > 0 ? index - 1 : 0);
+            }}
+          >{`<`}</Button>
+          {pages.map((p) => {
+            return index === p ? (
+              <Button
+                colorScheme="cyan"
+                onClick={() => {
+                  setIndex(p);
+                }}
+              >
+                {p + 1}
+              </Button>
+            ) : (
+              <Button
+                onClick={() => {
+                  setIndex(p);
+                }}
+              >
+                {p + 1}
+              </Button>
+            );
+          })}
+          <Button
+            onClick={() => {
+              setIndex(
+                index === pages.length - 1 ? pages.length - 1 : index + 1
+              );
+            }}
+          >{`>`}</Button>
+          <Button
+            onClick={() => {
+              setIndex(pages.length - 1);
+            }}
+          >{`>>`}</Button>
+        </Flex>
+
         {news ? (
-          <Accordion defaultIndex={news.map((_, i) => i)} allowToggle>
-            {news.map((n) => (
-              <AccordionItem bg="gray.100" margin="3rem 0.5rem" border="none" boxShadow='dark-lg' p='6' rounded='md'>
-                <AccordionButton>
+          <Accordion>
+            {news.slice(index * pageSizes, (index + 1) * pageSizes).map((n) => (
+              <AccordionItem
+                bg="gray.100"
+                margin="3rem 0.5rem"
+                border="none"
+                boxShadow="dark-lg"
+                p="6"
+                rounded="md"
+              >
+                <AccordionButton
+                  onClick={() => redirectToDetail(n.contentAsText)}
+                >
                   <Box
                     flex="1"
                     textAlign="left"
                     fontSize="1.5rem"
                     fontWeight="bold"
                   >
-                    {n.title}
+                    {n.createdTime?.toDateString()} - {n.name}
                   </Box>
-                  <AccordionIcon />
                 </AccordionButton>
-                <AccordionPanel pb={4}>{n.context}</AccordionPanel>
               </AccordionItem>
             ))}
           </Accordion>
