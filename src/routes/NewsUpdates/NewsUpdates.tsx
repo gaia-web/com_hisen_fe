@@ -30,7 +30,7 @@ function NewsUpdates() {
         if (child.name?.endsWith(".md")) {
           // TODO: Remove this, for demo only
           const a = Array.from(Array(22).keys());
-          for (const ee of a) {
+          for (const _ of a) {
             mdList.push(child as OneDriveFile);
           }
         }
