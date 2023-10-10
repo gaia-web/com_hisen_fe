@@ -1,5 +1,3 @@
-import { useContext } from "preact/hooks";
-
 let language: "cn" | "en" = "en";
 let forceUpdate: () => void;
 
