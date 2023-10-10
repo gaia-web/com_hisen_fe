@@ -1,7 +1,7 @@
-import Banner from '../../conponents/Home/Banner/Banner';
-import Feature from '../../conponents/Home/Feature/Feature';
-import Program from '../../conponents/Home/Program/Program';
-import Testimonials from '../../conponents/Home/Testimonials/Testimonials';
+import Banner from '../../components/Home/Banner/Banner';
+import Feature from '../../components/Home/Feature/Feature';
+import Program from '../../components/Home/Program/Program';
+import Testimonials from '../../components/Home/Testimonials/Testimonials';
 
 const NotFound = () => {
   return (

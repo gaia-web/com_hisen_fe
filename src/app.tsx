@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { Flex, Box } from '@chakra-ui/react';
-import Header from './conponents/Header/Header';
-import Footer from './conponents/Footer/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import { Router, Route } from 'preact-router';
 import Home from './routes/Home/Home';
 import AboutUs from './routes/AboutUs/AboutUs';
