@@ -12,6 +12,7 @@ import EntrepreneurBCPNP from './routes/ImmigrationPathways/EntrepreneurBCPNP/En
 import BCPNP from './routes/ImmigrationPathways/BCPNP/BCPNP';
 import NotFound from './routes/NotFound/NotFound';
 import NewsUpdates from './routes/NewsUpdates/NewsUpdates';
+import NewsDetail from './components/NewsDetail/NewsDetail';
 
 export function App() {
   return (
@@ -28,6 +29,7 @@ export function App() {
             <Route path="/BCPNP" component={BCPNP} />
             <Route path="/mark" component={EEMark} />
             <Route path="/news" component={NewsUpdates} />
+            <Route path="/news/detail" component={NewsDetail} />
             <Route default component={NotFound} />
           </Router>
         </Box>
