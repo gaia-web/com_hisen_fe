@@ -11,12 +11,23 @@ import ICT from "./routes/ImmigrationPathways/ICT/ICT";
 import EntrepreneurBCPNP from "./routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP";
 import BCPNP from "./routes/ImmigrationPathways/BCPNP/BCPNP";
 import NotFound from "./routes/NotFound/NotFound";
-import { useState } from "preact/hooks";
-import { setForceUpdate } from "./utils/language";
+import { useEffect, useState } from "preact/hooks";
+import {
+  applyLanguage,
+  getLanguage,
+  setForceUpdateFunction,
+} from "./utils/language";
 
 export function App() {
-  const [_, updateHelper] = useState({});
-  setForceUpdate(() => updateHelper({}));
+  const [_fakeState, setFakeState] = useState({});
+  setForceUpdateFunction(() => setFakeState({}));
+
+  useEffect(() => {
+    document.title = applyLanguage(
+      "海盛国际咨询有限公司",
+      "Hisen International Consulting Ltd."
+    );
+  }, [getLanguage()]);
 
   return (
     <ChakraProvider>

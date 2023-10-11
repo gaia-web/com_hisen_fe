@@ -6,7 +6,11 @@ function setLanguage(_: "cn" | "en") {
   forceUpdate?.();
 }
 
-export function setForceUpdate(_: () => void) {
+export function getLanguage() {
+  return language;
+}
+
+export function setForceUpdateFunction(_: () => void) {
   forceUpdate = _;
 }
 
