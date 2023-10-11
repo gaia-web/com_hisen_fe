@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { OneDriveAdapter, OneDriveFile } from "drive-adapters";
 import { useEffect, useState } from "preact/hooks";
+import Paginator from "../../components/Paginator/Paginator";
 
 function NewsUpdates() {
   const [news, setNews] = useState<OneDriveFile[]>([]);
@@ -55,50 +56,7 @@ function NewsUpdates() {
           新闻
         </Heading>
 
-        <Flex>
-          <Button
-            onClick={() => {
-              setIndex(0);
-            }}
-          >{`<<`}</Button>
-          <Button
-            onClick={() => {
-              setIndex(index > 0 ? index - 1 : 0);
-            }}
-          >{`<`}</Button>
-          {pages.map((p) => {
-            return index === p ? (
-              <Button
-                colorScheme="cyan"
-                onClick={() => {
-                  setIndex(p);
-                }}
-              >
-                {p + 1}
-              </Button>
-            ) : (
-              <Button
-                onClick={() => {
-                  setIndex(p);
-                }}
-              >
-                {p + 1}
-              </Button>
-            );
-          })}
-          <Button
-            onClick={() => {
-              setIndex(
-                index === pages.length - 1 ? pages.length - 1 : index + 1
-              );
-            }}
-          >{`>`}</Button>
-          <Button
-            onClick={() => {
-              setIndex(pages.length - 1);
-            }}
-          >{`>>`}</Button>
-        </Flex>
+        <Paginator index={index} setIndex={setIndex} pages={pages} />
 
         {news ? (
           <Accordion>
