@@ -5,8 +5,6 @@ import {
   AccordionButton,
   Heading,
   CircularProgress,
-  Flex,
-  Button,
 } from "@chakra-ui/react";
 import { OneDriveAdapter, OneDriveFile } from "drive-adapters";
 import { useEffect, useState } from "preact/hooks";
