@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Markdown from "marked-react";
+import './NewsDetail.css';
 
 const NewsDetail = () => {
   if (!history.state?.context) {
@@ -7,16 +8,25 @@ const NewsDetail = () => {
   }
 
   return (
-    <Box>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      bg="gray.50"
+      minHeight="100vh"
+    >
       <Box
-        bg="gray.100"
+        bg="white"
         maxW="1200px"
-        margin="3rem"
-        p={5}
-        pt="50px"
-        rounded="md"
+        w="100%"
+        marginY="5rem"
+        padding="5"
+        boxShadow="xl"
+        rounded="lg"
       >
-        <Markdown>{history.state.context}</Markdown>
+        <div className="markdown-content">
+          <Markdown>{history.state.context}</Markdown>
+        </div>
       </Box>
     </Box>
   );

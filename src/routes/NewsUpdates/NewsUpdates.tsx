@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   Icon,
   Text,
+  Center,
 } from "@chakra-ui/react";
 import { OneDriveAdapter, OneDriveFile } from "drive-adapters";
 import { useEffect, useState } from "preact/hooks";
@@ -109,7 +110,7 @@ function NewsUpdates() {
               ))}
             </Accordion>
           ) : (
-            <CircularProgress isIndeterminate color="blue.600" />
+            <Center mb="5rem"><CircularProgress isIndeterminate color="blue.600" /></Center>
           )}
           <Paginator index={index} setIndex={setIndex} pages={pages} />
         </Box>
