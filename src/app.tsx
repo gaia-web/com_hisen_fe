@@ -11,6 +11,8 @@ import ICT from "./routes/ImmigrationPathways/ICT/ICT";
 import EntrepreneurBCPNP from "./routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP";
 import BCPNP from "./routes/ImmigrationPathways/BCPNP/BCPNP";
 import NotFound from "./routes/NotFound/NotFound";
+import NewsUpdates from './routes/NewsUpdates/NewsUpdates';
+import NewsDetail from './components/NewsDetail/NewsDetail';
 import { useEffect, useState } from "preact/hooks";
 import {
   applyLanguage,
@@ -42,6 +44,8 @@ export function App() {
             <Route path="/EntrepreneurBCPNP" component={EntrepreneurBCPNP} />
             <Route path="/BCPNP" component={BCPNP} />
             <Route path="/mark" component={EEMark} />
+            <Route path="/news" component={NewsUpdates} />
+            <Route path="/news/detail" component={NewsDetail} />
             <Route default component={NotFound} />
           </Router>
         </Box>

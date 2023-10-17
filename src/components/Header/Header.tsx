@@ -296,7 +296,7 @@ const OBTAIN_NAV_ITEMS: () => Array<NavItem> = () => [
   },
   {
     label: applyLanguage("新闻", "News"),
-    href: "#",
+    href: "news",
   },
   {
     label: applyLanguage("在线打分", "Online EE Score Calculator"),
