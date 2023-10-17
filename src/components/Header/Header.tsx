@@ -274,11 +274,11 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: '关于我们',
-    href: 'about',
+    href: '/about',
   },
   {
     label: '新闻 ',
-    href: '#',
+    href: '/news',
   },
   {
     label: '在线打分 ',

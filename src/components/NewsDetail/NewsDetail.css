@@ -1,0 +1,139 @@
+.markdown-content {
+    line-height: 1.75;
+    font-size: 17px;
+    color: #333;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.3;
+}
+
+.markdown-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.markdown-content time {
+    text-align: center;
+}
+
+.markdown-content h2 {
+    font-size: 2rem;
+}
+
+.markdown-content p {
+    margin: 1.25rem 0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.markdown-content a {
+    color: #005cc5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.markdown-content a:hover,
+.markdown-content a:focus {
+    color: #003d99;
+    text-decoration: underline;
+}
+
+.markdown-content code {
+    background-color: #f7f7f7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.875em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.markdown-content pre {
+    background-color: #f7f7f7;
+    padding: 1.25rem;
+    border-radius: 5px;
+    font-size: 0.875em;
+}
+
+.markdown-content blockquote {
+    border-left: 5px solid #ddd;
+    padding-left: 1.25rem;
+    color: #777;
+    font-style: italic;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    padding-left: 1.75rem;
+}
+
+.markdown-content li {
+    margin: 0.75rem 0;
+}
+
+@media (max-width: 600px) {
+    .markdown-content {
+        font-size: 16px;
+        padding: 1rem;
+    }
+
+    .markdown-content h1,
+    .markdown-content h2,
+    .markdown-content h3,
+    .markdown-content h4,
+    .markdown-content h5,
+    .markdown-content h6 {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .markdown-content h1 {
+        font-size: 2rem;
+    }
+
+    .markdown-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .markdown-content p {
+        margin: 1rem 0;
+    }
+
+    .markdown-content a {
+        font-weight: normal;
+    }
+
+    .markdown-content code {
+        font-size: 0.85em;
+    }
+
+    .markdown-content pre {
+        padding: 0.75rem;
+    }
+
+    .markdown-content blockquote {
+        padding-left: 0.75rem;
+    }
+
+    .markdown-content ul,
+    .markdown-content ol {
+        padding-left: 1.25rem;
+    }
+
+    .markdown-content li {
+        margin: 0.5rem 0;
+    }
+}
