@@ -1,20 +1,36 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { Flex, Box } from '@chakra-ui/react';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import { Router, Route } from 'preact-router';
-import Home from './routes/Home/Home';
-import AboutUs from './routes/AboutUs/AboutUs';
-import ContactUs from './routes/ContactUs/ContactUs';
-import EEMark from './routes/EEMark/EEMark';
-import ICT from './routes/ImmigrationPathways/ICT/ICT';
-import EntrepreneurBCPNP from './routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP';
-import BCPNP from './routes/ImmigrationPathways/BCPNP/BCPNP';
-import NotFound from './routes/NotFound/NotFound';
+import { ChakraProvider } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import { Router, Route } from "preact-router";
+import Home from "./routes/Home/Home";
+import AboutUs from "./routes/AboutUs/AboutUs";
+import ContactUs from "./routes/ContactUs/ContactUs";
+import EEMark from "./routes/EEMark/EEMark";
+import ICT from "./routes/ImmigrationPathways/ICT/ICT";
+import EntrepreneurBCPNP from "./routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP";
+import BCPNP from "./routes/ImmigrationPathways/BCPNP/BCPNP";
+import NotFound from "./routes/NotFound/NotFound";
 import NewsUpdates from './routes/NewsUpdates/NewsUpdates';
 import NewsDetail from './components/NewsDetail/NewsDetail';
+import { useEffect, useState } from "preact/hooks";
+import {
+  applyLanguage,
+  getLanguage,
+  setForceUpdateFunction,
+} from "./utils/language";
 
 export function App() {
+  const [_fakeState, setFakeState] = useState({});
+  setForceUpdateFunction(() => setFakeState({}));
+
+  useEffect(() => {
+    document.title = applyLanguage(
+      "海盛国际咨询有限公司",
+      "Hisen International Consulting Ltd."
+    );
+  }, [getLanguage()]);
+
   return (
     <ChakraProvider>
       <Flex flexDir="column" minH="100vh">
@@ -36,5 +52,5 @@ export function App() {
         <Footer></Footer>
       </Flex>
     </ChakraProvider>
-  )
+  );
 }
