@@ -281,12 +281,12 @@ const OBTAIN_NAV_ITEMS: () => Array<NavItem> = () => [
       {
         label: "联邦类通道移民项目",
         subLabel: "Federal Express Entry Immigration Program",
-        href: "#",
+        href: "/Federation",
       },
       {
         label: "团聚移民项目",
         subLabel: "Family Sponsorship Program",
-        href: "#",
+        href: "/FamilyClass",
       },
     ],
   },

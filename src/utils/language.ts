@@ -1,4 +1,4 @@
-let language: "cn" | "en" = "en";
+let language: "cn" | "en" = "cn";
 let forceUpdate: () => void;
 
 function setLanguage(_: "cn" | "en") {

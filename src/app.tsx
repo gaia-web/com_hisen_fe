@@ -10,6 +10,8 @@ import EEMark from "./routes/EEMark/EEMark";
 import ICT from "./routes/ImmigrationPathways/ICT/ICT";
 import EntrepreneurBCPNP from "./routes/ImmigrationPathways/EntrepreneurBCPNP/EntrepreneurBCPNP";
 import BCPNP from "./routes/ImmigrationPathways/BCPNP/BCPNP";
+import Federation from "./routes/ImmigrationPathways/Federation/Federation";
+import FamilyClass from "./routes/ImmigrationPathways/FamilyClass/FamilyClass";
 import NotFound from "./routes/NotFound/NotFound";
 import NewsUpdates from './routes/NewsUpdates/NewsUpdates';
 import NewsDetail from './components/NewsDetail/NewsDetail';
@@ -43,6 +45,8 @@ export function App() {
             <Route path="/ict" component={ICT} />
             <Route path="/EntrepreneurBCPNP" component={EntrepreneurBCPNP} />
             <Route path="/BCPNP" component={BCPNP} />
+            <Route path="/Federation" component={Federation} />
+            <Route path="/FamilyClass" component={FamilyClass} />
             <Route path="/mark" component={EEMark} />
             <Route path="/news" component={NewsUpdates} />
             <Route path="/news/detail" component={NewsDetail} />
