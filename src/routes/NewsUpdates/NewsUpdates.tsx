@@ -112,7 +112,9 @@ function NewsUpdates() {
           ) : (
             <Center mb="5rem"><CircularProgress isIndeterminate color="blue.600" /></Center>
           )}
-          <Paginator index={index} setIndex={setIndex} pages={pages} />
+          <Box my="2rem">
+            <Paginator index={index} setIndex={setIndex} pages={pages} />
+          </Box>
         </Box>
       </Box>
     </Box>
