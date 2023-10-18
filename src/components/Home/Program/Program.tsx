@@ -120,7 +120,7 @@ export default function CallToActionWithIllustration() {
           "For executives or investors with some domestic assets and management experience who wish to conduct business or invest in Canada."
         )}
         cycle={applyLanguage("6-12个月", "6-12 Months")}
-        linkTo="/visa"
+        linkTo="/ict"
         imageUrl="https://images.pexels.com/photos/2916826/pexels-photo-2916826.jpeg?auto=compress&cs=tinysrgb&w=800"
       />
 
@@ -134,7 +134,7 @@ export default function CallToActionWithIllustration() {
           "申请周期预计为14-20个月，具体时间取决于申请材料的完整性和处理速度",
           "The application cycle is expected to take 14-20 months, depending on the completeness of the application materials and the speed of processing"
         )}
-        linkTo="/bc-ei"
+        linkTo="/entrepreneur-bcpnp"
         imageUrl="https://images.pexels.com/photos/2782485/pexels-photo-2782485.jpeg?auto=compress&cs=tinysrgb&w=800"
       />
 
@@ -148,7 +148,7 @@ export default function CallToActionWithIllustration() {
           "For skilled foreign workers, international students and entrepreneurs who wish to settle and work in B.C."
         )}
         cycle={applyLanguage("12-18个月", "12-18 Months")}
-        linkTo="/bc-pnp"
+        linkTo="/bcpnp"
         imageUrl="https://images.pexels.com/photos/11424500/pexels-photo-11424500.jpeg?auto=compress&cs=tinysrgb&w=800"
       />
 
@@ -162,7 +162,7 @@ export default function CallToActionWithIllustration() {
           "For skilled workers and professionals who wish to work or settle anywhere in Canada."
         )}
         cycle={applyLanguage("12-24个月", "12-24 Months")}
-        linkTo="/federal"
+        linkTo="/federation"
         imageUrl="https://images.pexels.com/photos/7328/building-architecture-historical-tower.jpg?auto=compress&cs=tinysrgb&w=800"
       />
 
@@ -173,7 +173,7 @@ export default function CallToActionWithIllustration() {
           "Applies to foreign nationals who wish to be reunited with family members in Canada."
         )}
         cycle={applyLanguage("18-36个月", "18-36 Months")}
-        linkTo="/family"
+        linkTo="/family-class"
         imageUrl="https://images.pexels.com/photos/2354073/pexels-photo-2354073.jpeg?auto=compress&cs=tinysrgb&w=800"
       />
     </Box>

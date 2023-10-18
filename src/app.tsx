@@ -43,10 +43,10 @@ export function App() {
             <Route path="/about" component={AboutUs} />
             <Route path="/contact-us" component={ContactUs} />
             <Route path="/ict" component={ICT} />
-            <Route path="/EntrepreneurBCPNP" component={EntrepreneurBCPNP} />
-            <Route path="/BCPNP" component={BCPNP} />
-            <Route path="/Federation" component={Federation} />
-            <Route path="/FamilyClass" component={FamilyClass} />
+            <Route path="/entrepreneur-bcpnp" component={EntrepreneurBCPNP} />
+            <Route path="/bcpnp" component={BCPNP} />
+            <Route path="/federation" component={Federation} />
+            <Route path="/family-class" component={FamilyClass} />
             <Route path="/mark" component={EEMark} />
             <Route path="/news" component={NewsUpdates} />
             <Route path="/news/detail" component={NewsDetail} />

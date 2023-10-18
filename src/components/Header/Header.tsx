@@ -271,22 +271,22 @@ const OBTAIN_NAV_ITEMS: () => Array<NavItem> = () => [
       {
         label: "BC投资移民类别",
         subLabel: "Entrepreneur Immigration",
-        href: "/EntrepreneurBCPNP",
+        href: "/entrepreneur-bcpnp",
       },
       {
         label: "BC省提名项目",
         subLabel: "British Columbia Provincial Nominee Program",
-        href: "/BCPNP",
+        href: "/bcpnp",
       },
       {
         label: "联邦类通道移民项目",
         subLabel: "Federal Express Entry Immigration Program",
-        href: "/Federation",
+        href: "/federation",
       },
       {
         label: "团聚移民项目",
         subLabel: "Family Sponsorship Program",
-        href: "/FamilyClass",
+        href: "/family-class",
       },
     ],
   },
